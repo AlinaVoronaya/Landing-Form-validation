@@ -1,4 +1,5 @@
-// ---------RESET----------
+//--------------RESET---------------------------------
+
 * {
   padding: 0;
   margin: 0;
@@ -87,6 +88,7 @@ h6 {
 }
 
 // --------------------------------------------
+
 @font-face {
   font-family: "Galien";
   src: url(../../assets/fonts/Galien/OTF/Galien-Bold.otf);
@@ -100,10 +102,6 @@ h6 {
 @import "../../assets/fonts/gilroy-semibold.css";
 @import "../../assets/fonts/gilroy-bold.css";
 $basic-font-color: #1F3F68;
-@mixin container {
-  max-width: 980px;
-  margin: 0 auto;
-}
 
 @mixin galien-700 {
   font-family: 'Galien', sans-serif;
@@ -200,7 +198,9 @@ $basic-font-color: #1F3F68;
   }
 
   &__btn {
+    transition: background 0.3s;
     padding: 15px 48px;
+    line-height: 50px;
     &:hover {
       background: #316099;
     }
@@ -210,7 +210,6 @@ $basic-font-color: #1F3F68;
 .btn {
   @include gilroy-400;
   font-size: 16px;
-  line-height: 26px;
   letter-spacing: 0.04em;
   color: #fff;
   background: #5A98D0;
@@ -270,12 +269,18 @@ $basic-font-color: #1F3F68;
     }
     &__link {
       @include gilroy-500;
+      color: #5A98D0;
       font-size: 14px;
       line-height: 30px;
       letter-spacing: 0.05em;
+      transition: font-size 0.3s;
       display: flex;
       gap: 24px;
       align-items: center;
+
+      &:hover {
+        font-size: 18px;
+      }
 
       & a {
         color: #5A98D0;
@@ -292,6 +297,12 @@ $basic-font-color: #1F3F68;
     &:nth-child(3) {
       grid-area: card3;
     }
+  }
+}
+
+.link {
+  &__text {
+    color: #5A98D0;
   }
 }
 
@@ -358,9 +369,14 @@ $basic-font-color: #1F3F68;
       }
 
       &:nth-child(8) {
+        transition: font-size 0.3s;
+        color: #FFFFFF;
         border-bottom: 0;
         border-right: 0;
         background: rgba(31, 63, 104, .2);
+        &:hover {
+          font-size: 24px;
+        }
       }
     }
   }
@@ -412,6 +428,7 @@ $basic-font-color: #1F3F68;
 
   &__btn {
     padding: 15px 75px;
+    transition: background 0.3s;
     &:hover {
       background: #1F3F68;
     }
@@ -451,6 +468,13 @@ $basic-font-color: #1F3F68;
 
     & li {
       margin-bottom: 24px;
+
+      & a {
+        transition: color 0.3s;
+        &:hover {
+          color: #1F3F68
+        }
+      }
 
       &:nth-child(1) {
         position: relative;
@@ -498,6 +522,13 @@ $basic-font-color: #1F3F68;
 
     & li {
       margin-bottom: 16px;
+
+      & a {
+        transition: color 0.3s;
+        &:hover {
+          color: #1F3F68;
+        }
+      }
     }
   }
 
@@ -520,6 +551,12 @@ $basic-font-color: #1F3F68;
 
     & li {
       margin-bottom: 16px;
+      & a {
+        transition: color 0.3s;
+        &:hover {
+          color: #1F3F68;
+        }
+      }
     }
   }
 
@@ -564,6 +601,8 @@ $basic-font-color: #1F3F68;
   left: 0;
   overflow-y: auto;
   visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.3s ease;
 
   &__overlay {
     position: fixed;
@@ -659,6 +698,7 @@ $basic-font-color: #1F3F68;
       border: 1px solid #356EAD;
       padding: 21px 42px;
       opacity: 0.4;
+      resize: none;
 
       &::placeholder {
         color: #1F3F68;
@@ -695,6 +735,14 @@ $basic-font-color: #1F3F68;
   }
 
   &__error {
+    color: red;
+    @include gilroy-500;
+    font-size: 14px;
+    line-height: 26px;
+    letter-spacing: 0.04em;
+    visibility: hidden;
+  }
+  &__error-email {
     color: red;
     @include gilroy-500;
     font-size: 14px;

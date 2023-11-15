@@ -1,36 +1,41 @@
 require("./styles/styles.scss");
-import { openModal, closeModal } from "./modules/modalFunctions";
-import { closeSuccess } from "./modules/cuccessFunctions";
-import { formValidation } from "./modules/formValidation";
+import { Modal } from "./modulesJS/modalFunctions";
+import { closeSuccess } from "./modulesJS/cuccessFunctions";
+import { formValidation } from "./modulesJS/formValidation";
 
 if (process.env.NODE_ENV === "development") {
   require("../index.html");
 }
 
+const myModal = new Modal('modal');
+
 const button = document.getElementById("modal-btn");
 if (button) {
-  button.onclick = openModal;
+  button.addEventListener("click", myModal.open.bind(myModal));
 }
 
 const closeButton = document.getElementById("modal-close");
 if (closeButton) {
-  closeButton.onclick = function(event) {
+  closeButton.addEventListener("click", function(event) {
     event.preventDefault();
-    closeModal();
-  };
+    myModal.close.bind(myModal);
+  });
 }
 
 const closeOverlay = document.getElementById("overlay");
 if (closeOverlay) {
-  closeOverlay.onclick = closeModal;
+  closeOverlay.addEventListener("click", myModal.close.bind(myModal));
 }
 
 const form = document.getElementById("form");
 if (form) {
-  form.onsubmit = formValidation;
+  form.addEventListener("submit", function(event) {
+    event.preventDefault();
+    formValidation(event);
+  });
 }
 
 const closeSuccessWindow = document.getElementById("successOverlay");
 if (closeSuccessWindow) {
-  closeSuccessWindow.onclick = closeSuccess;
+  closeSuccessWindow.addEventListener("click", closeSuccess);
 }
