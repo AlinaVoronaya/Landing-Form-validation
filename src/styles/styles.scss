@@ -427,10 +427,7 @@ $basic-font-color: #1F3F68;
 
   &__btn {
     padding: 15px 75px;
-<<<<<<< HEAD
     transition: background 0.3s;
-=======
->>>>>>> b19ef06643cf9765ccdfedb831d10c267350930a
     &:hover {
       background: #1F3F68;
     }
@@ -471,7 +468,6 @@ $basic-font-color: #1F3F68;
     & li {
       margin-bottom: 24px;
 
-<<<<<<< HEAD
       & a {
         transition: color 0.3s;
         &:hover {
@@ -479,8 +475,6 @@ $basic-font-color: #1F3F68;
         }
       }
 
-=======
->>>>>>> b19ef06643cf9765ccdfedb831d10c267350930a
       &:nth-child(1) {
         position: relative;
         padding-left: 35px;
@@ -527,7 +521,6 @@ $basic-font-color: #1F3F68;
 
     & li {
       margin-bottom: 16px;
-<<<<<<< HEAD
 
       & a {
         transition: color 0.3s;
@@ -535,8 +528,6 @@ $basic-font-color: #1F3F68;
           color: #1F3F68;
         }
       }
-=======
->>>>>>> b19ef06643cf9765ccdfedb831d10c267350930a
     }
   }
 
@@ -559,15 +550,12 @@ $basic-font-color: #1F3F68;
 
     & li {
       margin-bottom: 16px;
-<<<<<<< HEAD
       & a {
         transition: color 0.3s;
         &:hover {
           color: #1F3F68;
         }
       }
-=======
->>>>>>> b19ef06643cf9765ccdfedb831d10c267350930a
     }
   }
 
@@ -612,11 +600,8 @@ $basic-font-color: #1F3F68;
   left: 0;
   overflow-y: auto;
   visibility: hidden;
-<<<<<<< HEAD
   opacity: 0;
   transition: visibility 0s, opacity 0.3s ease;
-=======
->>>>>>> b19ef06643cf9765ccdfedb831d10c267350930a
 
   &__overlay {
     position: fixed;
@@ -712,10 +697,7 @@ $basic-font-color: #1F3F68;
       border: 1px solid #356EAD;
       padding: 21px 42px;
       opacity: 0.4;
-<<<<<<< HEAD
       resize: none;
-=======
->>>>>>> b19ef06643cf9765ccdfedb831d10c267350930a
 
       &::placeholder {
         color: #1F3F68;
@@ -759,7 +741,6 @@ $basic-font-color: #1F3F68;
     letter-spacing: 0.04em;
     visibility: hidden;
   }
-<<<<<<< HEAD
   &__error-email {
     color: red;
     @include gilroy-500;
@@ -768,8 +749,6 @@ $basic-font-color: #1F3F68;
     letter-spacing: 0.04em;
     visibility: hidden;
   }
-=======
->>>>>>> b19ef06643cf9765ccdfedb831d10c267350930a
 }
 
 .success {
