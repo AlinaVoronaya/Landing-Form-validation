@@ -7,6 +7,7 @@ if (process.env.NODE_ENV === "development") {
   require("../index.html");
 }
 
+
 const myModal = new Modal('modal');
 
 const button = document.getElementById("modal-btn");
