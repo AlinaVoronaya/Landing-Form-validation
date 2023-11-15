@@ -23,5 +23,4 @@ npm run serve
 npm run build
 ```
 
-[Ссылка на Github Pages](https://alinavoronaya.github.io/d-test-2/)
 
